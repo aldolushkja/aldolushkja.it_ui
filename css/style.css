@@ -65,6 +65,23 @@ nav {
     box-shadow: 10px 10px 5px grey;
 }
 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+a[class=fa]{
+    text-decoration: none;
+}
+
+a[class=fa]:hover{
+    text-decoration: none;
+}
+
 ul {
     list-style: none;
 }
