@@ -9,8 +9,5 @@ function processForm(e) {
 }
 
 var form = document.getElementById('my-form');
-if (form.attachEvent) {
-    form.attachEvent("submit", processForm);
-} else {
-    form.addEventListener("submit", processForm);
-}
+if (form.attachEvent) {form.attachEvent("submit", processForm);}
+else {form.addEventListener("submit", processForm);}
