@@ -4,7 +4,7 @@ pipeline{
 
         stage('Init config'){
             steps{
-                sh "chmod +x ./scripts/*"
+                sh "sudo chmod +x ./scripts/*"
             }
         }
         stage('Remove old content') {
