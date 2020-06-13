@@ -1,2 +1,20 @@
-sh script: './copyFile.sh', label: 'Copy File'
-sh script: './changeFilePermissions.sh', label: 'Copy File'
+pipeline{
+    stages {
+        stage('Remove old content') {
+            steps {
+              sh  './scripts/clean.sh'
+            }
+        }
+        stage('Copy File') {
+            steps {
+              sh  './scripts/copyFile.sh'
+            }
+        }
+
+        stage('Change file permissions') {
+            steps {
+              sh  './scripts/changeFilePermissions.sh'
+            }
+        }
+    }
+}
