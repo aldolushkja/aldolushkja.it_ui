@@ -1,6 +1,12 @@
 pipeline{
     agent any
     stages {
+
+        stage('Init config'){
+            steps{
+                sh "chmod +x ./scripts/*"
+            }
+        }
         stage('Remove old content') {
             steps {
               sh  './scripts/clean.sh'
