@@ -7,21 +7,24 @@ pipeline{
                 sh "sudo chmod +x ./scripts/*"
             }
         }
+
         stage('Remove old content') {
             steps {
-              sh  './scripts/clean.sh'
+              sh  './scripts/1_clean.sh'
             }
         }
+
         stage('Copy File') {
             steps {
-              sh  './scripts/copyFile.sh'
+              sh  './scripts/2_copyFile.sh'
             }
         }
 
         stage('Change file permissions') {
             steps {
-              sh  './scripts/changeFilePermissions.sh'
+              sh  './scripts/3_changeFilePermissions.sh'
             }
         }
+
     }
 }
